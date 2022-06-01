@@ -25,6 +25,23 @@ export class AccountsComponent implements OnInit {
 
   handleSearchAccount() {
     let accountId : string= this.accountFromGroup.value.accountId;
-    this.accountObservable= this.accountService.getAccount(accountId, this.currentPage, this.pageSize);
+    this.accountObservable= this.accountService.
+    getAccount(accountId, this.currentPage, this.pageSize);
+  }
+
+  gotoPage(page: number) {
+    this.currentPage=page;
+    this.handleSearchAccount();
   }
 }
+
+
+
+
+
+
+
+
+
+
+
